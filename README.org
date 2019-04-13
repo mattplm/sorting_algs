@@ -1,0 +1,36 @@
+#+TITLE: Visualisation of sorting algorithms
+
+In this repository, there are implementations for a number of common
+sorting algorithm and a mean to visualize them. The implementations
+mostly come from [[https://en.wikipedia.org/wiki/Sorting_algorithm][this]] Wikipedia page.
+
+Matplotlib is used as the frontend of the program but could be easily
+swapped with any other frontend.
+
+The program is not intended to serve any purpose but to allow me to
+look back at it when needed. You may use it for any purpose in
+accordance with the license.
+
+* TODO Implement these algorithms [1/11]
+
+- [X] bubble sort
+- [ ] insertion sort
+- [ ] selection sort
+- [ ] merge sort
+- [ ] quick sort
+- [ ] heap sort
+- [ ] shell sort
+- [ ] comb sort
+- [ ] counting sort
+- [ ] bucket sort
+- [ ] radix sort
+
+* License
+
+This work is free software under the MIT license. Please use it in
+accordance with this license.
+
+* Inspirations
+
+Of course this mini project was inspired by [[https://www.youtube.com/watch?v=kPRA0W1kECg][this]] youtube video. Also
+the bubble sort visualization from [[https://thecodingtrain.com/CodingChallenges/114-bubble-sort.html][the coding train]].
