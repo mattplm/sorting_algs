@@ -75,12 +75,36 @@ def selection_sort(table):
 
 def merge_sort(table, start=0, end=None):
     ''' Execute the merge sort algorithm '''
-    raise NotImplementedError()
+    if end is None:
+        end = len(table) - 1
+    if end <= start:
+        return
+
+    mid = start + ((end - start + 1) // 2) - 1
+    yield from merge_sort(table, start=start, end=mid)
+    yield from merge_sort(table, start=mid + 1, end=end)
+    yield from merge(table, start, mid, end)
+    yield table
 
 
 def merge(table, start, mid, end):
     ''' Helper function for merge_sort '''
-    raise NotImplementedError()
+    i_start = start
+    i_mid = mid + 1
+    merged = []
+    while i_start <= mid and i_mid <= end:
+        if table[i_start] < table[i_mid]:
+            merged.append(table[i_start])
+            i_start += 1
+        else:
+            merged.append(table[i_mid])
+            i_mid += 1
+    # Append the rest of the array from left to right
+    merged.extend(table[i_start:mid+1])
+    merged.extend(table[i_mid:end+1])
+    for i, val in enumerate(merged):
+        table[start + i] = val
+        yield table
 
 
 def quick_sort(table, start=0, end=None):
