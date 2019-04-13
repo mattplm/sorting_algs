@@ -109,7 +109,23 @@ def merge(table, start, mid, end):
 
 def quick_sort(table, start=0, end=None):
     ''' Execute the quick sort algorithm '''
-    raise NotImplementedError()
+    if end is None:
+        end = len(table) - 1
+    if start >= end:
+        return
+
+    pivot = table[end]
+    pivot_i = start
+
+    for i in range(start, end):
+        if table[i] < pivot:
+            _swap(table, i, pivot_i)
+            pivot_i += 1
+        yield table
+    _swap(table, end, pivot_i)
+    yield table
+    yield from quick_sort(table, start, pivot_i - 1)
+    yield from quick_sort(table, pivot_i + 1, end)
 
 
 def heap_sort(table):
