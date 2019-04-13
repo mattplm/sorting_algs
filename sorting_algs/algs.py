@@ -63,7 +63,14 @@ def insertion_sort(table):
 
 def selection_sort(table):
     ''' Execute the selection sort algorithm '''
-    raise NotImplementedError()
+    for i in range(len(table)-1):
+        min_idx = i
+        for j in range(i+1, len(table)):
+            if table[j] < table[min_idx]:
+                min_idx = j
+                yield table
+        _swap(table, min_idx, i)
+        yield table
 
 
 def merge_sort(table, start=0, end=None):
