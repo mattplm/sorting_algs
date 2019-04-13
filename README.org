@@ -11,10 +11,10 @@ The program is not intended to serve any purpose but to allow me to
 look back at it when needed. You may use it for any purpose in
 accordance with the license.
 
-* TODO Implement these algorithms [1/11]
+* TODO Implement these algorithms [2/11]
 
 - [X] bubble sort
-- [ ] insertion sort
+- [X] insertion sort
 - [ ] selection sort
 - [ ] merge sort
 - [ ] quick sort

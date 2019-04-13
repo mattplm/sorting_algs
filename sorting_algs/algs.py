@@ -52,7 +52,13 @@ def bubble_sort(table):
 
 def insertion_sort(table):
     ''' Execute the insertion sort algorithm '''
-    raise NotImplementedError()
+    for i in range(len(table)):
+        for j in range(i, 0, -1):
+            yield table
+            if table[j-1] > table[j]:
+                _swap(table, j, j-1)
+            else:
+                break
 
 
 def selection_sort(table):
