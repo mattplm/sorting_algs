@@ -11,7 +11,7 @@ The program is not intended to serve any purpose but to allow me to
 look back at it when needed. You may use it for any purpose in
 accordance with the license.
 
-* TODO Implement these algorithms [5/11]
+* TODO Implement these algorithms [6/11]
 
 - [X] bubble sort
 - [X] insertion sort
@@ -19,7 +19,7 @@ accordance with the license.
 - [X] merge sort
 - [X] quick sort
 - [ ] heap sort
-- [ ] shell sort
+- [X] shell sort
 - [ ] comb sort
 - [ ] counting sort
 - [ ] bucket sort

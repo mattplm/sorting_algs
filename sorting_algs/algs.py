@@ -135,7 +135,20 @@ def heap_sort(table):
 
 def shell_sort(table):
     ''' Execute the shell sort algorithm '''
-    raise NotImplementedError()
+    gaps = [701, 301, 132, 57, 23, 10, 4, 1]
+
+    for gap in gaps:
+        i = gap
+        while i < len(table):
+            tmp = table[i]
+            j = i
+            while j >= gap and table[j-gap] > tmp:
+                table[j] = table[j - gap]
+                yield table
+                j -= gap
+            table[j] = tmp
+            yield table
+            i += 1
 
 
 def comb_sort(table):
