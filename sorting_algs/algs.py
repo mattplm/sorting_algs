@@ -17,6 +17,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+import math
+
 ''' Module containing generators for common sorting algorithms '''
 
 
@@ -153,7 +155,21 @@ def shell_sort(table):
 
 def comb_sort(table):
     ''' Execute the comb sort algorithm '''
-    raise NotImplementedError()
+    gap = len(table)
+    shrink = 1.3
+    is_sorted = False
+    while not is_sorted:
+        gap = math.floor(gap / shrink)
+        if gap <= 1:
+            is_sorted = True
+
+        i = 0
+        while i + gap < len(table):
+            if table[i] > table[i + gap]:
+                _swap(table, i, i + gap)
+                yield table
+                is_sorted = False
+            i += 1
 
 
 ALGS = {
