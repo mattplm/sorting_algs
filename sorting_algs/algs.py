@@ -172,6 +172,21 @@ def comb_sort(table):
             i += 1
 
 
+def counting_sort(table):
+    ''' Execute the counthing sort algorithm '''
+    raise NotImplementedError()
+
+
+def bucket_sort(table):
+    ''' Execute the bucket sort algorithm '''
+    raise NotImplementedError()
+
+
+def radix_sort(table):
+    ''' Execute the radix sort algorithm '''
+    raise NotImplementedError()
+
+
 ALGS = {
     'b': (bubble_sort, 'Bubblesort'),
     'i': (insertion_sort, 'Insertionsort'),
@@ -180,7 +195,10 @@ ALGS = {
     'h': (heap_sort, 'Heapsort'),
     'q': (quick_sort, 'Quicksort'),
     'e': (shell_sort, 'Shellsort'),
-    'c': (comb_sort, 'Combsort')
+    'c': (comb_sort, 'Combsort'),
+    'o': (counting_sort, 'Countingsort'),
+    'u': (bucket_sort, 'Bucketsort'),
+    'r': (radix_sort, 'Radixsort')
 }
 
 
