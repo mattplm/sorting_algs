@@ -174,7 +174,17 @@ def comb_sort(table):
 
 def counting_sort(table):
     ''' Execute the counthing sort algorithm '''
-    raise NotImplementedError()
+    output = table.copy()
+    count = [0 for _ in range(max(table) + 1)]
+    for e in table:
+        count[e] += 1
+    for i in range(1, len(count)):
+        count[i] += count[i-1]
+    for i, e in enumerate(table):
+        output[count[e]-1] = table[i]
+        yield output
+        count[e] -= 1
+    yield output
 
 
 def bucket_sort(table):
